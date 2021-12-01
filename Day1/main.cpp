@@ -1,14 +1,14 @@
-﻿#include <iostream>
+﻿/*
+ * Advent of Code 2021
+ * Day 1: Sonar Sweep
+ */
+
+#include <iostream>
 #include <fstream>
 #include <string>
 #include <optional>
 #include <array>
 #include <algorithm>
-
-/*
- * Advent of Code 2021
- * Day 1: Sonar Sweep
- */
 
 /*
  * Puzzle 1:
