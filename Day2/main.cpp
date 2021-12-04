@@ -58,6 +58,7 @@ int Puzzle1(const bool printValues)
 		}
 
 		const int result = pos[0] * pos[1];
+		file.close();
 		return result;
 	}
 	return -1;
@@ -115,6 +116,7 @@ int Puzzle2(bool printValues)
 		}
 
 		const int result = pos[0] * pos[1];
+		file.close();
 		return result;
 	}
 	return -1;
