@@ -12,7 +12,7 @@
 #include <sstream>
 #include <vector>
 
-#define BIT_LENGTH 12
+constexpr int BIT_LENGTH = 12;
 
 /*
  * Puzzle 1:

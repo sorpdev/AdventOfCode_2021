@@ -3,9 +3,9 @@ https://adventofcode.com/
 
 ## Stats
 
-| Day | Lines of Code |
+| Day | Lines of code |
 | - | - |
-| 1 | 127 |
-| 2 | 133 |
-| 3 | 201 |
-| 4 | 235 |
+| 1 | 93 |
+| 2 | 97 |
+| 3 | 162 |
+| 4 | 205 |
