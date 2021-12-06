@@ -2,6 +2,8 @@ workspace "AdventOfCode_2021"
 
   cppdialect "C++20"
 
+  platforms { "x64"}
+
   configurations { "Debug", "Release" }
 
   startproject "Day1"
