@@ -370,3 +370,5 @@ Makefile
 *.xcodeproj
 *.xcworkspace
 .idea/
+*.sln
+*.vcxproj*
