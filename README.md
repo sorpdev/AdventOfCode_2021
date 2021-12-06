@@ -9,3 +9,4 @@ https://adventofcode.com/
 | 2 | 97 |
 | 3 | 162 |
 | 4 | 205 |
+| 5 | 128 |
