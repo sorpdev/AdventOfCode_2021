@@ -364,3 +364,11 @@ FodyWeavers.xsd
 
 bin-int/
 build/
+.DS_STORE
+Makefile
+*/Makefile
+*.xcodeproj
+*.xcworkspace
+.idea/
+*.sln
+*.vcxproj*
