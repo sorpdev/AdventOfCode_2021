@@ -83,6 +83,10 @@ int Puzzle1(bool printValues = false)
 	return numberList.size();
 }
 
+/*
+ * Puzzle 2:
+ *	How many lanternfish would there be after 256 days?
+ */
 long long Puzzle2()
 {
 	long long result = 0;
