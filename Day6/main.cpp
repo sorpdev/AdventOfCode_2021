@@ -14,81 +14,12 @@
  * Puzzle 1:
  *  Find a way to simulate lanternfish.
  *  How many lanternfish would there be after 80 days?
- */
-int Puzzle1(bool printValues = false)
-{
-	std::vector<int> numberList;
-
-	if (std::ifstream file("input.txt"); file.is_open())
-	{
-		std::string numbers;
-		getline(file, numbers);
-
-		int day = 0;
-		constexpr int simulationDays = 80;
-
-		std::stringstream stream(numbers);
-
-		for (;;)
-		{
-			int number;
-			stream >> number;
-			stream.ignore(std::numeric_limits<std::streamsize>::max(), ',');
-			numberList.push_back(number);
-			if (stream.bad() || stream.eof())
-			{
-				break;
-			}
-		}
-
-		//Print initial state
-		if (printValues)
-		{
-			std::cout << "Initial state: ";
-			for (int j = 0; j < numberList.size(); j++)
-			{
-				int& fish = numberList[j];
-				std::cout << fish << (j < numberList.size() - 1 ? "," : "");
-			}
-			std::cout << "\n";
-		}
-		day++;
-
-		//Do simulation
-		for (int i = 0; i < simulationDays; i++)
-		{
-			if (printValues) std::cout << "After  " << day << " day" << (day > 1 ? "s: " : ":  ");
-
-			for (int j = 0; j < numberList.size(); j++)
-			{
-				if (int& fish = numberList[j]; fish == 0)
-				{
-					fish = 6;
-					numberList.push_back(9);
-				}
-				else fish--;
-			}
-
-			if (printValues)
-			{
-				std::cout << numberList.size();
-				std::cout << "\n";
-			}
-			day++;
-		}
-
-		if (printValues) { std::cout << "Amount of fish: " << numberList.size() << "\n"; }
-	}
-
-	return numberList.size();
-}
-
-/*
  * Puzzle 2:
  *	How many lanternfish would there be after 256 days?
  */
-long long Puzzle2()
+long long Puzzle(bool puzzle2 = false)
 {
+	const int days = (puzzle2 ? 257 : 81);
 	long long result = 0;
 
 	if (std::ifstream file("input.txt"); file.is_open())
@@ -119,7 +50,7 @@ long long Puzzle2()
 			fishCounts[n] += 1;
 		}
 
-		for (int i = 1; i < 257; i++)
+		for (int i = 1; i < days; i++)
 		{
 			const long long preZero = fishCounts[0];
 			const long long preSeven = fishCounts[7];
@@ -146,8 +77,8 @@ long long Puzzle2()
 
 int main()
 {
-	const int puzzle1Result = Puzzle1(false);
+	const int puzzle1Result = Puzzle();
 	std::cout << "[Puzzle 1] " << puzzle1Result << " lanternfish after 80 days\n";
-	const long long puzzle2Result = Puzzle2();
+	const long long puzzle2Result = Puzzle(true);
 	std::cout << "[Puzzle 2] " << puzzle2Result << " lanternfish after 256 days\n";
 }
